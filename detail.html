@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail - Winzy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #333;
+        }
+        .cta-button {
+            background-color: #FFB300;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #F8A300;
+        }
+        .socials a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .socials a:hover {
+            color: #FFB300;
+        }
+        .project-cta-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .project-cta-section h5 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        .card-custom {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-10px);
+        }
+        .card-body ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .card-body ul li::before {
+            content: "\2022";
+            color: #FFB300; 
+            font-size: 20px;
+            padding-right: 10px;
+        }
+
+        .app-screenshots-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .app-screenshots-section img {
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-screenshots-section .row {
+            justify-content: center;
+        }
+
+        .explore-projects-section {
+            background-color: #FFB300;
+            color: white;
+            padding: 50px 0;
+        }
+        .explore-projects-section h5 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .explore-projects-section .btn {
+            background-color: white;
+            color: #FFB300;
+            font-weight: bold;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .explore-projects-section .btn:hover {
+            background-color: #F8A300;
+        }
+
+        /* Flexbox for Key Features and Technology Stack */
+        .features-technology-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .feature-tech-item {
+            flex: 1 1 calc(50% - 20px); /* Make each item take 50% of available space */
+        }
+        @media (max-width: 768px) {
+            .feature-tech-item {
+                flex: 1 1 100%; /* Stack items on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section id="project-detail" class="section">
+        <div class="container">
+            <!-- Project Title -->
+            <h2 class="section-title text-center mb-4">Winzy - Chat App</h2>
+
+            <!-- Project Image Carousel -->
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/imgs/folio-1.jpg" class="d-block w-100" alt="Winzy Project 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/imgs/folio-2.jpg" class="d-block w-100" alt="Winzy Project 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/imgs/folio-3.jpg" class="d-block w-100" alt="Winzy Project 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Project Description -->
+            <div class="project-description mt-5">
+                <h5 class="subtitle text-center">About the Project</h5>
+                <p class="text-center mb-5">Winzy is a real-time chat app designed for fast and secure communication. Developed using SwiftUI and Firebase Realtime Database, the app allows users to chat with each other instantly, providing a smooth user experience and sleek design.</p>
+            </div>
+
+            <!-- Key Features and Technology Stack -->
+            <div class="features-technology-container">
+                <!-- Key Features Card -->
+                <div class="feature-tech-item">
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <h5 class="card-title">Key Features</h5>
+                            <ul>
+                                <li>Real-time chat</li>
+                                <li>User authentication with Firebase</li>
+                                <li>Group and private chats</li>
+                                <li>Message notifications</li>
+                                <li>Profile management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Stack Card -->
+                <div class="feature-tech-item">
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <h5 class="card-title">Technology Stack</h5>
+                            <ul>
+                                <li>SwiftUI</li>
+                                <li>Firebase Realtime Database</li>
+                                <li>Swift</li>
+                                <li>Cloud Storage</li>
+                                <li>Push Notifications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Section -->
+    <section class="app-screenshots-section">
+        <div class="container text-center">
+            <h5 class="section-title">App Screenshots</h5>
+            <p class="mb-4">Here are some of the key screens from the Winzy Chat App. Experience the smooth design and functionality!</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="assets/imgs/folio-1.jpg" class="img-fluid" alt="Winzy Screenshot 1">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="assets/imgs/folio-2.jpg" class="img-fluid" alt="Winzy Screenshot 2">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="assets/imgs/folio-3.jpg" class="img-fluid" alt="Winzy Screenshot 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore More Projects Section -->
+    <section class="explore-projects-section text-center">
+        <div class="container">
+            <h5 class="section-title mb-4">Explore More Projects</h5>
+            <a href="#" class="btn">See More Projects</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Kirit Gareja. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
